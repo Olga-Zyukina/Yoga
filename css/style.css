@@ -46,7 +46,7 @@ a {
   height: 50px;
 }
 .logo-sign {
-  font-size: 14px;
+  font-size: max(0.5em, min(0.875em, 1.16vw));
   line-height: 14px;
   letter-spacing: 0.15rem;
   text-transform: uppercase;
@@ -66,7 +66,7 @@ header ul {
 }
 header ul li {
   height: 50px;
-  font-size: 16px;
+  font-size: max(0.5em, min(1em, 1.33vw));
   letter-spacing: 0.15rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -85,12 +85,12 @@ header ul li:hover {
   height: 100vh;
   overflow: hidden;
   background-image: url(../img/first-screen-bg.jpg);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .hero__block {
-  width: 750px;
-  min-height: 300px;
+  width: 50%;
   border: 6px solid var(--accent-color);
   background-color: rgba(0, 0, 0, 0.4);
   margin: 0 auto;
@@ -100,7 +100,7 @@ header ul li:hover {
 }
 .hero__block-link {
   color: var(--white-color);
-  font-size: 22px;
+  font-size: max(0.7em, min(1.375em, 1.83vw));
   font-weight: bold;
 }
 .hero__block:after {
@@ -115,13 +115,13 @@ header ul li:hover {
 .hero__block-title {
   color: var(--white-color);
   text-transform: uppercase;
-  font-size: 52px;
+  font-size: max(1.625em, min(3.25em, 4.33vw));
   margin-top: 35px;
 }
 .hero__block-descr {
   color: var(--accent-color);
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: max(0.7em, min(1.375em, 1.83vw));
   margin-top: 35px;
   font-weight: bold;
 }
@@ -142,7 +142,7 @@ header ul li:hover {
 .about .info-header__item {
   color: var(--accent-color);
   font-weight: bold;
-  font-size: 24px;
+  font-size: max(0.75em, min(1.5em, 2vw));
   cursor: pointer;
 }
 .about .info-header__item:after {
@@ -168,7 +168,7 @@ header ul li:hover {
   width: 50%;
 }
 .about .info-tabcontent .description-title {
-  font-size: 34px;
+  font-size: max(1em, min(2.125em, 2.83vw));
   color: var(--accent-color);
 }
 .about .info-tabcontent .description-title:after {
@@ -182,7 +182,7 @@ header ul li:hover {
 .about .info-tabcontent .description-text {
   margin-top: 30px;
   color: var(--white-color);
-  font-size: 20px;
+  font-size: max(0.65em, min(1.25em, 1.66vw));
   font-weight: 300;
   line-height: 1.5rem;
   padding-right: 20px;
@@ -665,12 +665,33 @@ footer .social .social-block a img {
     min-height: 432px;
   }
 }
+@media (max-width: 768px) {
+  .hero__block {
+    width: 75%;
+  }
+}
 @media (min-width: 992px) {
   .container {
     max-width: 960px;
   }
   .about {
     min-height: 558px;
+  }
+}
+@media (max-width: 992px) {
+  .about {
+    padding: 100px 0 50px;
+  }
+  .about .info-tabcontent {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .about .info-tabcontent .description,
+  .about .info-tabcontent .photo {
+    width: 90%;
+  }
+  .about .info-tabcontent .description-btn {
+    margin-bottom: 20px;
   }
 }
 @media (min-width: 1200px) {
