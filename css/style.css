@@ -226,17 +226,17 @@ header ul li:hover {
   text-align: center;
 }
 .timer-title {
-  font-size: 36px;
+  font-size: max(1.125em, min(2.25em, 3vw));
   color: var(--gray-color);
 }
 .timer-action {
-  font-size: 24px;
+  font-size: max(1em, min(1.5em, 2vw));
   color: var(--gray-color);
   margin-top: 40px;
 }
 .timer-numbers {
   margin-top: 40px;
-  font-size: 90px;
+  font-size: max(3em, min(5.625em, 7.5vw));
   color: var(--accent-color);
 }
 .timer-numbers:after {
@@ -386,7 +386,7 @@ header ul li:hover {
   padding: 150px 0 150px;
 }
 .counter-title {
-  font-size: 32px;
+  font-size: max(1.125em, min(2.25em, 2.66vw));
   color: var(--accent-color);
 }
 .counter-title:after {
@@ -405,7 +405,7 @@ header ul li:hover {
   align-items: center;
 }
 .counter-block-option {
-  font-size: 22px;
+  font-size: max(1em, min(1.83em, 2.45vw));
   color: var(--accent-color);
 }
 .counter-block-input {
@@ -417,7 +417,7 @@ header ul li:hover {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid var(--accent-color);
-  font-size: 46px;
+  font-size: max(1.5em, min(2.875em, 3.83vw));
   text-align: center;
 }
 .counter-block select {
@@ -432,11 +432,11 @@ header ul li:hover {
   margin-top: 30px;
   padding-right: 50px;
   text-align: right;
-  font-size: 38px;
+  font-size: max(1.2em, min(2.375em, 3.16vw));
   color: var(--accent-color);
 }
 .counter-total span {
-  font-size: 46px;
+  font-size: 46pxmax(1.5em, min(2.875em, 3.83vw));
 }
 .counter input[type="number"]::-webkit-inner-spin-button,
 .counter input[type="number"]::-webkit-outer-spin-button {
@@ -453,7 +453,7 @@ header ul li:hover {
 
 .contact {
   margin: 0 auto;
-  padding: 150px 0 150px;
+  padding: 150px 0;
 }
 .contact-content {
   display: flex;
@@ -649,6 +649,7 @@ footer .social .social-block a img {
 
 /* MEDIA */
 
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
@@ -657,6 +658,17 @@ footer .social .social-block a img {
     min-height: 324px;
   }
 }
+@media (max-width: 575px) {
+  .counter-wrap {
+    max-width: 300px;
+    margin-left: 18px; 
+  }
+  footer .social .social-block {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+}  
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
@@ -679,19 +691,28 @@ footer .social .social-block a img {
   }
 }
 @media (max-width: 992px) {
-  .about {
-    padding: 100px 0 50px;
+  .about, .slider, .counter, .contact {
+    padding: 100px 0;
   }
-  .about .info-tabcontent {
+  .about .info-tabcontent,
+  .contact-content {
     flex-direction: column;
     padding: 10px;
   }
   .about .info-tabcontent .description,
-  .about .info-tabcontent .photo {
+  .about .info-tabcontent .photo,
+  .contact-img,
+  .contact-form {
     width: 90%;
   }
   .about .info-tabcontent .description-btn {
     margin-bottom: 20px;
+  }
+  .timer {
+    margin: 100px 0;
+  }
+  .slider .wrap .prev, .slider .wrap .next {
+    width: 50px;
   }
 }
 @media (min-width: 1200px) {
