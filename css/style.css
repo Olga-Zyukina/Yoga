@@ -731,3 +731,29 @@ footer .social .social-block a img {
     min-height: 787px;
   }
 }
+
+/* BACK-TO-TOP */
+
+.back-to-top {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: var(--accent-color);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  transition: all 0.4s;
+  cursor: pointer;
+  display: none;
+}
+.back-to-top img {
+  margin: 7px auto;
+}
+.back-to-top:hover {
+  background: var(--gray-color);
+}
+.back-to-top-show {
+  display: block;
+}
