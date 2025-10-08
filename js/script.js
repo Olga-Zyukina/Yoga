@@ -40,7 +40,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
 
   let deadline = new Date();
-  deadline.setDate(deadline.getDate() + 10);
+  deadline.setDate(deadline.getDate() + 3);
 
   function getTimeRemaining(endtime) {
     let t = Date.parse(endtime) - Date.parse(new Date()),
