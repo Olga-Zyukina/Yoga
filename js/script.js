@@ -38,7 +38,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
   // TIMER
 
-  let deadline = "2022-07-31";
+  let deadline = "2026-07-31";
 
   function getTimeRemaining(endtime) {
     let t = Date.parse(endtime) - Date.parse(new Date()),
